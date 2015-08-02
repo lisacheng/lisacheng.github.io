@@ -16,4 +16,10 @@ $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
     $('.progress-bar').css('width', percentsold); 
     $('.percentage-label').html( percentsold + " \(" + sold + " sold out of " + total + " \)");
     $('.ratebtc').html( ratebtc );
-});
+}
+
+function openPrivModal(){
+    "use strict";
+    //showLoginForm();
+    $('#privModal').modal('show');
+ }
