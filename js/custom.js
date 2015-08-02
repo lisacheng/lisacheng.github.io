@@ -20,6 +20,5 @@ $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
 
 function openPrivModal(){
     "use strict";
-    //showLoginForm();
     $('#privModal').modal('show');
  }
