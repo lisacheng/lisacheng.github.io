@@ -22,3 +22,16 @@ function openPrivModal(){
     "use strict";
     $('#privModal').modal('show');
  }
+
+function opentac(){
+swal({
+html:true,
+title: "Do You Accept the Terms and Conditions?",
+text: "By procceding you acknowledge that you have read and understand the <a href='pdf/BitCrystalsTokenSaleTerms.pdf'>Terms</a> and <a href='pdf/BitCrystalsTokenSaleAgreement.pdf'>Conditions</a>",
+type: "info",   showCancelButton: true,
+confirmButtonText: "Proceed",
+closeOnConfirm: false },
+function(){
+window.open("http://whitjack.me/sog","_self");
+});
+}
