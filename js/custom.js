@@ -11,8 +11,8 @@ $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
     var left = data['remaining'];
     var total = sold + left;
     var ratebtc = data['rateT'];
-//    var percentsold = sold/total + '%';
-    var percentsold = 20 + '%';
+    var percentsold = sold/total + '%';
+//    var percentsold = 20 + '%';
     $('.progress-bar').css('width', percentsold); 
     $('.percentage-label').html( percentsold + " \(" + sold + " sold out of " + total + " \)");
     $('.ratebtc').html( ratebtc );
@@ -21,7 +21,11 @@ $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
 function openPrivModal(){
     "use strict";
     $('#privModal').modal('show');
- }
+}
+function openTermsModal(){
+    "use strict";
+    $('#termsModal').modal('show');
+}
 
 function opentac(){
 swal({
