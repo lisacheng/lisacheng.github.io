@@ -22,6 +22,10 @@ function openPrivModal(){
     "use strict";
     $('#privModal').modal('show');
  }
+ function openTermsModal(){
+    "use strict";
+    $('#termsModal').modal('show');
+ }
 
 function opentac(){
 swal({
