@@ -39,3 +39,12 @@ function(){
 window.open("crowdsale/index.html","_self");
 });
 }
+
+var nextYear = moment.tz("2015-08-04 06:00", "America/Los_Angeles");
+
+console.log(nextYear);
+ 
+$('#clock').countdown(nextYear.toDate(), function(event) {
+  $(this).html(event.strftime('%H Hours, %M Minutes, %S Seconds'));
+});
+
