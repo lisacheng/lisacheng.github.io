@@ -32,6 +32,6 @@ type: "info",   showCancelButton: true,
 confirmButtonText: "Proceed",
 closeOnConfirm: false },
 function(){
-window.open("http://whitjack.me/sog","_self");
+window.open("crowdsale/index.html","_self");
 });
 }
