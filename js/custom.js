@@ -7,15 +7,19 @@
  * File Description: Place here your custom scripts
  */
 $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
-    var sold = data['sold'];
+    var sold = data['sold.toFixed(2)'];
     var left = data['remaining'];
     var total = sold + left;
     var ratebtc = data['rateT'];
     var percent = sold/total * 100;
-    var percentsold = percent.toFixed(2) + '%';
+    var raised = data.toFixed(2) + 'BTC';
+    var percentsold = data.toFixed(2) + '%';
+    var orders = data['backers'];
     $('.progress-bar').css('width', percentsold);
     $('.percentage-label').html( percentsold + " \(" + sold + " sold out of " + total + " \)");
     $('.ratebtc').html( ratebtc );
+    $('.backers').html( orders);
+    $('.raised').html( raised);
 }); 
 
 function openPrivModal(){
@@ -40,9 +44,10 @@ window.open("crowdsale/index.html","_self");
 });
 }
 
-var nextYear = moment.tz("2015-08-04 06:00", "America/Los_Angeles");
+var nextYear = moment.tz("2015-09-03 01:00", "GMT/UTC");
 
 $('#clock').countdown(nextYear.toDate(), function(event) {
-  $(this).html(event.strftime('Welcome to Spells of Genesis!  The crowdsale starts in %H Hours, %M Minutes, and %S Seconds'));
+  $(this).html(event.strftime('Welcome to Spells of Genesis! The token sale ends in\ %D Days, %H Hours, %M Minutes, and %S Seconds'));
 });
+
 

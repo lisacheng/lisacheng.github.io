@@ -157,6 +157,12 @@ blockquote {
 	width: 100%;
 	z-index: 2;
 }
+.shapeshift {
+	position: absolute;
+	top: 75%;
+	width: 100%;
+	z-index: 2;
+}
 .progress {
     position: absolute;
     top: 90%;

@@ -2,6 +2,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
+<html ng-app="plunker">
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
@@ -10,17 +11,19 @@
 		<meta name='EverdreamSoft' content=''>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link async href="http://fonts.googleapis.com/css?family=Merriweather%20Sans" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link rel='shortcut icon' href='images/spells.ico'>
 		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 		<link href="css/animations.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
-	        <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        	<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+	    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+  
 	</head>
 
-	<body class="no-trans">
+	<body class="no-trans" ng-controller="MainCtrl">
 		<!-- scrollToTop -->
 		<!-- ================ -->
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
@@ -36,10 +39,19 @@
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">BitCrystals</h1>
 							<p class="lead text-center">BitCrystals are tradable Counterparty assets which act as the game-fuel and premium currency in EverdreamSoft’s upcoming free-to-play mobile game Spells of Genesis and flagship trading card game Moonga. They can be used to enhance the gaming experience like buying card packs or unlocking new features and in-game items.</p>
+							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
+<br><br>
+<div class="shapeshift">
+	   <div class="col-md-1 col-md-offset-5 object-non-visible" data-animation-effect="fadeIn">
+	<div class="orders"></div>
+	<div class="raised"></div>
+</div>
+</div>
  <div class="banner-buynow">
                 <div class="col-md-1 col-md-offset-5 object-non-visible" data-animation-effect="fadeIn">
                     <a href="javascript:void(0);" onclick="opentac();" class="btn btn-info" role="button"> 
@@ -59,7 +71,7 @@
 		<!-- section start -->
 		<!-- ================ -->
 		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
-            <div><center></h1></center></div>
+            <div><center><h2 id="clock"></h1></center></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -668,7 +680,11 @@
 		</div>
 		<br>
 		<br>
-	
+	  <div class="col-md-1 col-md-offset-5 object-non-visible" data-animation-effect="fadeIn">
+                    <a href="javascript:void(0);" onclick="opentac();" class="btn btn-info" role="button"> 
+                    Buy Now<br><div class="ratebtc"></div>
+                    </a>
+                </div>
 	
 
 
