@@ -42,7 +42,7 @@ closeOnConfirm: false },
 function(){
 window.open("crowdsale/index.html","_self");
 });
-
+}
 var nextYear = moment.tz("2015-09-03 01:00", "GMT/UTC");
 
 $('#clock').countdown(nextYear.toDate(), function(event) {
