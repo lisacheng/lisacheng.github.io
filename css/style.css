@@ -36,7 +36,7 @@ h6 {
 h1 {
 	font-size: 38px;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 h2 {
 	font-size: 28px;
@@ -156,6 +156,15 @@ blockquote {
 	top: 65%;
 	width: 100%;
 	z-index: 2;
+}
+.shapeshift {
+	position: absolute;
+	top: 75%;
+	width: 100%;
+	z-index: 2;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 700;
 }
 .progress {
     position: absolute;
