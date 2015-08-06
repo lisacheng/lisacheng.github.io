@@ -6,22 +6,21 @@
  * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
  * File Description: Place here your custom scripts
  */
-$.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
-  
-   var sold = parseFloat(data['sold']).toFixed(2);//problem
-    var left = data['remaining'];
-    var total = parseFloat(sold + left).toFixed(2);//problem
-    var ratebtc = data['rateT'];
-    var percent = sold/total * 100;
-    var raised = parseFloat(data['raised']).toFixed(2) + ' BTC';//problem
-    var percentsold = parseFloat(data['sold']).toFixed(2) + '%';//problem
-    var orders = data['orders'] + ' Backers';
+$.getJSON("https://www2.shapeshift.io/crowdsales", function (json) {
+    var soldT = Math.round(json.sold);
+    var left = json.remaining;
+    var total = Math.round(soldT+left);
+    var ratebtc = json.rateT;
+    var percent = Math.round(soldT/total*100);
+    var backers = json.orders;
+    var raisedtotal = Math.round(json.raised) + 'BTC from ';
+    var percentsold = Math.round(percent) + '%';
+    var backers = json.orders + ' backers';
     $('.progress-bar').css('width', percentsold);
-    $('.percentage-label').html( percentsold + " \(" + sold + " sold out of " + total + " \)");
-    $('.ratebtc').html( ratebtc );
-    $('.orders').html( orders);
-    $('.raised').html( raised);
-});
+    $('.percentage-label').html(percentsold + " \(" + soldT + " out of " + total + " \)");
+    $('.ratebtc').html( ratebtc );  
+    $('.backers').html( raisedtotal+backers );
+}); 
 
 function openPrivModal(){
     "use strict";
