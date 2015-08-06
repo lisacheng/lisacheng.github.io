@@ -1,9 +1,15 @@
 
-var app = angular.module('plunker', []);
 
-app.controller('MainCtrl', function($scope) {
- $scope.resultData = [{
-   	"Orders": 114,
- 	"Raised":"326.41" + " BTC",
-  }];
+    $.ajax({ 
+    type: 'GET', 
+    url: 'https://www2.shapeshift.io/crowdsales', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', {
+                text: element.name
+            }));
+        });
+    }
 });
