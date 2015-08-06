@@ -15,11 +15,11 @@ $.get( "http://www2.shapeshift.io/crowdsales", function( data ) {
     var percent = sold/total * 100;
     var raised = parseFloat(data['raised']).toFixed(2) + ' BTC';//problem
     var percentsold = parseFloat(data['sold']).toFixed(2) + '%';//problem
-    var orders = data['orders'];
+    var orders = data['orders'] + ' Backers';
     $('.progress-bar').css('width', percentsold);
     $('.percentage-label').html( percentsold + " \(" + sold + " sold out of " + total + " \)");
     $('.ratebtc').html( ratebtc );
-    $('.orders').html( orders + " Backers ");
+    $('.orders').html( orders);
     $('.raised').html( raised);
 });
 
