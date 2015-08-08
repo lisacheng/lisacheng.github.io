@@ -153,25 +153,65 @@ blockquote {
 }
 .banner-buynow {
 	position: absolute;
-	top: 65%;
-	width: 100%;
-	z-index: 2;
-}
-.shapeshift {
-	position: absolute;
-	top: 75%;
-	width: 100%;
-	z-index: 1;
-	color: #fff;
-	font-size: 30px;
-	font-weight: 700;
+	top: 50%;
+	left: 42%;
+	width: 10%;
+	font-weight: bold;
+  
 }
 .progress {
     position: absolute;
-    top: 90%;
-    width: 100%;
-    z-index: 2;
+    top: 30%;
+   
+    text-align: center;
+    width: 50%;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
 }
+.backers {
+	color: white; 
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  
+    top:80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+
+
+
+}
+.stats{
+    color: white; 
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+   
+    top:73%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+
 .subfooter {
 	background-color: #fff;
 	border-top: 1px solid #f3f3f3;
@@ -320,6 +360,7 @@ blockquote {
 .btn {
 	padding: 8px 15px;
 	font-size: 14px;
+	font-weight: bold;
 	line-height: 1.42857143;
 	min-width: 160px;
 	text-align: center;
@@ -330,9 +371,10 @@ blockquote {
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+
 }
 .btn-default {
-	color: #55acee;
+	color: #339BEB;
 	border: 1px solid #cccccc;
 }
 .btn-default:hover {

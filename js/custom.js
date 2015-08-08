@@ -1,18 +1,30 @@
-$.getJSON("https://www2.shapeshift.io/crowdsales", function (json) {
-    var soldT = Math.round(json.sold);
-    var left = json.remaining;
-    var total = Math.round(soldT+left);
-    var ratebtc = json.rateT;
-    var percent = Math.round(soldT/total*100);
-    var backers = json.orders;
-    var raisedtotal = Math.round(json.raised) + 'BTC from ';
-    var percentsold = Math.round(percent) + '%';
-    var backers = json.orders + ' backers';
-    $('.progress-bar').css('width', percentsold);
-    $('.percentage-label').html(percentsold + " \(" + soldT + " out of " + total + " \)");
-    $('.ratebtc').html( ratebtc );  
-    $('.backers').html( raisedtotal+backers );
-}); 
+$(function(){
+     $.getJSON("https://www2.shapeshift.io/crowdsales", function (json) {
+         console.log(json);
+        var soldT = Math.round(json.sold);
+        var left = json.remaining;
+        var total = Math.round(soldT+left);
+        var ratebtc = json.rateT;
+        var percent = Math.round(soldT/total*100);
+        var backers = json.orders;
+        var raised = Math.round(json.raised);
+        var raisedtotal = raised + ' BTC';
+        var goal = Math.round((raised/730) * 100);
+
+        var percentsold = Math.round(percent) + '%';
+        var backers = json.orders + ' backers';
+        var funded = Math.round(raised/730*100);
+        $('.progress-bar').css('width', percentsold);
+
+        $('.percentage-label').html(soldT + "  coins sold ");
+        $('.ratebtc').html(ratebtc );  
+        $('.backers').html(raisedtotal + " from " + backers );
+        $('.progress-bar-success').css('width', goal + '%');
+        $('.goal-label').html(raisedtotal + " towards goal of 730 BTC");
+        $('.funded-label').html(funded + " % Funded");
+    }); 
+    
+});
 
 function openPrivModal(){
     "use strict";
