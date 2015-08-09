@@ -15,7 +15,7 @@ $(function(){
         var funded = Math.round(raised/730*100);
         $('.progress-bar').css('width', percentsold);
 
-        $('.percentage-label').html(soldT + "  coins sold ");
+        $('.percentage-label').html(soldT + "  BitCrystals sold out of 60,000,000");
         $('.ratebtc').html(ratebtc );  
         $('.backers').html(raisedtotal + " from " + backers );
         $('.progress-bar-success').css('width', goal + '%');
