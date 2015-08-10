@@ -6,7 +6,6 @@ $(function(){
         var total = Math.round(soldT+left);
         var ratebtc = json.rateT;
         var percent = Math.round(soldT/total*100);
-        var backers = json.orders;
         var raised = Math.round(json.raised);
         var raisedtotal = raised + ' BTC';
         var goal = Math.round((raised/730) * 100);
@@ -14,13 +13,12 @@ $(function(){
         var percentsold = Math.round(percent) + '%';
         var backers = json.orders + ' backers';
         var funded = Math.round(raised/730*100);
+        
         $('.progress-bar').css('width', percentsold);
-
-        $('.percentage-label').html(soldT + "  coins sold ");
         $('.ratebtc').html(ratebtc );  
         $('.backers').html(raisedtotal + " from " + backers );
         $('.progress-bar-success').css('width', goal + '%');
-        $('.goal-label').html(raisedtotal + " towards goal of 730 BTC");
+        $('.goal-label').html(raisedtotal + " towards goal of 730 BTC (" + soldT + " out of " + total + " BCY)");
         $('.funded-label').html(funded + " % Funded");
     }); 
     

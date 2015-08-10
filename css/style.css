@@ -171,6 +171,20 @@ blockquote {
     right: 0;
     
     margin: auto;
+
+}
+.progress1 {
+    position: absolute;
+    top: 90%;
+   
+    text-align: center;
+    width: 50%;
+
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
 }
 .backers {
 	color: white; 
