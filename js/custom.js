@@ -9,19 +9,20 @@ $(function(){
         var backers = json.orders;
         var raised = Math.round(json.raised);
         var raisedtotal = raised + ' BTC';
-        var goal = Math.round((raised/730) * 100);
+        var goal = Math.round((raised/1100) * 100);
 
         var percentsold = Math.round(percent) + '%';
         var backers = json.orders + ' backers';
-        var funded = Math.round(raised/730*100);
+        var fullgoal = Math.round(raised/730*100);
+		var funded = Math.round(raised/1100*100);
         $('.progress-bar').css('width', percentsold);
 
         $('.percentage-label').html(soldT + "  coins sold ");
         $('.ratebtc').html(ratebtc );  
         $('.backers').html(raisedtotal + " from " + backers );
         $('.progress-bar-success').css('width', goal + '%');
-        $('.goal-label').html(raisedtotal + " towards goal of 730 BTC");
-        $('.funded-label').html(funded + " % Funded");
+        $('.goal-label').html(1100 - raised + " BTC towards stretch goal #1 of 1100 BTC");
+        $('.funded-label').html(" 100 % Funded stretch goal #1 "+funded+" %");
     }); 
     
 });
