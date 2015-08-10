@@ -2,7 +2,7 @@
 
     $.ajax({ 
     type: 'GET', 
-    url: 'https://ideopass.com/shapeshift.php', 
+    url: 'https://www2.shapeshift.io/crowdsales', 
     data: { get_param: 'value' }, 
     dataType: 'json',
     success: function (data) { 
