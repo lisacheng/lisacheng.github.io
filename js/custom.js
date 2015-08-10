@@ -1,5 +1,5 @@
 $(function(){
-     $.getJSON("https://www.ideopass.com/shapeshift.php", function (json) {
+     $.getJSON("https://www2.shapeshift.io/crowdsales", function (json) {
          console.log(json);
         var soldT = Math.round(json.sold);
         var left = json.remaining;

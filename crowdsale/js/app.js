@@ -1,8 +1,8 @@
 var app = angular.module('ss-widget', ['monospaced.qrcode']);
 
 app.factory('ss', function($http){
-	var server = "https://www.ideopass.com/shapeshift.php";
-	var server2 = "https://www.ideopass.com/shapeshift.php";
+	var server = "http://www2.shapeshift.io/";
+	var server2 = "http://www2.shapeshift.io/";
 	return {
 		getCoins: function(callback) {
 			$http.get(server + 'getcoins').success(callback);
