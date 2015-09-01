@@ -61,7 +61,7 @@ window.open("crowdsale/index.html","_self");
 });
 }
 
-var nextYear = moment.tz("2015-09-03 01:00", "ETC/UTC");
+var nextYear = moment.tz("2015-09-03 13:00", "ETC/UTC");
 
 $('#clock').countdown(nextYear.toDate(), function(event) {
   $(this).html(event.strftime('The token sale ends in\n %D Days, %H Hours, %M Minutes, and %S Seconds'));
